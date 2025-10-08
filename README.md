@@ -1,11 +1,11 @@
-# 🧠 Tech Challenge – Fase 03 · Fine-tuning em AmazonTitles-1.3MM
+# Tech Challenge – Fase 03 · Fine-tuning em AmazonTitles-1.3MM
 
 Projeto desenvolvido para o **Tech Challenge – Fase 03** do curso *IA para Devs (Pós Tech)*.  
 O objetivo é realizar o **fine-tuning de um foundation model** (como BERT, Llama, Mistral, etc.) utilizando o dataset **AmazonTitles-1.3MM**, para que o modelo seja capaz de **gerar descrições de produtos** a partir de **perguntas sobre seus títulos**.
 
 ---
 
-## 📘 Objetivos do Projeto
+##  Objetivos do Projeto
 
 - Aplicar técnicas de *fine-tuning* em um modelo pré-treinado.
 - Utilizar o dataset `trn.json` (do AmazonTitles-1.3MM), contendo campos `title` e `content`.
@@ -14,7 +14,7 @@ O objetivo é realizar o **fine-tuning de um foundation model** (como BERT, Llam
 
 ---
 
-## 🧩 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 .
@@ -34,7 +34,7 @@ O objetivo é realizar o **fine-tuning de um foundation model** (como BERT, Llam
 
 ---
 
-## ⚙️ Pré-requisitos
+##  Pré-requisitos
 
 - Python 3.10+
 - pip ou conda
@@ -57,9 +57,9 @@ python-dotenv
 
 ---
 
-## 🧰 Configuração do Ambiente
+##  Configuração do Ambiente
 
-### 1️⃣ Clonar o repositório e criar ambiente virtual
+### Clonar o repositório e criar ambiente virtual
 ```bash
 git clone  https://github.com/danielmestre98/tech-challange-3
 cd tech-challenge-3
@@ -68,7 +68,7 @@ python -m venv .venv
 source .venv/bin/activate   # (Windows: .venv\Scripts\activate)
 ```
 
-### 2️⃣ Instalar dependências
+### Instalar dependências
 ```bash
 pip install -r requirements.txt
 ```
@@ -80,7 +80,7 @@ pip install torch transformers accelerate datasets peft evaluate scikit-learn pa
 
 ---
 
-## 📥 Dataset
+## Dataset
 
 Baixe o dataset **AmazonTitles-1.3MM** (link indicado no desafio) e coloque o arquivo `trn.json` dentro de:
 
@@ -101,9 +101,9 @@ Resposta: DESCRIÇÃO_DO_PRODUTO
 
 ---
 
-## 🚀 Execução
+## Execução
 
-### 🧠 Etapa 1 – Treinamento
+### Etapa 1 – Treinamento
 Abra o notebook `treino.ipynb` e execute todas as células para:
 
 1. Carregar e limpar o dataset.
@@ -111,7 +111,7 @@ Abra o notebook `treino.ipynb` e execute todas as células para:
 3. Configurar e rodar o fine-tuning.
 4. Salvar o modelo em `models/<checkpoint>`.
 
-### 🧪 Etapa 2 – Teste e Inferência
+### Etapa 2 – Teste e Inferência
 Abra o notebook `teste.ipynb` e rode:
 
 - O carregamento do modelo treinado.
@@ -126,7 +126,7 @@ Modelo: "O Echo Dot (4ª geração) é um alto-falante inteligente com Alexa int
 
 ---
 
-## 📊 Métricas e Avaliação
+## Métricas e Avaliação
 
 - Avaliação qualitativa (clareza e coerência das respostas).
 - Métricas quantitativas opcionais: **ROUGE**, **BLEU**, **METEOR**.
@@ -134,7 +134,7 @@ Modelo: "O Echo Dot (4ª geração) é um alto-falante inteligente com Alexa int
 
 ---
 
-## 🧪 Execução via Terminal (Opcional)
+## Execução via Terminal (Opcional)
 
 Você pode usar o Papermill para automatizar a execução dos notebooks:
 
@@ -147,3 +147,4 @@ papermill notebooks/treino.ipynb notebooks/treino.out.ipynb   -p data_path "data
 # Rodar teste
 papermill notebooks/teste.ipynb notebooks/teste.out.ipynb   -p model_dir "models/checkpoint-01" -p samples_out "outputs/samples"
 ```
+
